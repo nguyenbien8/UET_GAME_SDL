@@ -36,8 +36,6 @@
 		<Unit filename="Coin.h" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
-		<Unit filename="Lava.cpp" />
-		<Unit filename="Lava.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
 		<Unit filename="Player.cpp" />
