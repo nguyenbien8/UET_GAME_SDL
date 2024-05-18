@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1714922165 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\main.cpp
+	"Game.h"
+
+1716022416 c:\users\min\downloads\sdl2_game_cb\sdl2game\game.h
+	<iostream>
+	<fstream>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1716022175 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\player.cpp
+	"Game.h"
+	"Map.h"
+	"TextureManager.h"
+	"Player.h"
+
+1714922159 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\texturemanager.cpp
+	"Game.h"
+	"TextureManager.h"
+
+1714921674 c:\users\min\downloads\sdl2_game_cb\sdl2game\texturemanager.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1715875578 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\map.cpp
+	"Game.h"
+	"Map.h"
+	"TextureManager.h"
+
+1715789608 c:\users\min\downloads\sdl2_game_cb\sdl2game\map.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+
+1716022701 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\game.cpp
+	"Game.h"
+	"Map.h"
+	"Player.h"
+	"TextureManager.h"
+	"Coin.h"
+	"Trap.h"
+	"TextManager.h"
+
+1714927477 c:\users\min\downloads\sdl2_game_cb\sdl2game\player.h
+	"Game.h"
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1714926238 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\coin.cpp
+	"Coin.h"
+	"Game.h"
+	"TextureManager.h"
+
+1714926205 c:\users\min\downloads\sdl2_game_cb\sdl2game\coin.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1715067293 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\trap.cpp
+	"Game.h"
+	"Trap.h"
+	"TextureManager.h"
+
+1715067173 c:\users\min\downloads\sdl2_game_cb\sdl2game\trap.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1715068855 c:\users\min\downloads\sdl2_game_cb\sdl2game\lava.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1715069264 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\lava.cpp
+	"Lava.h"
+	"Game.h"
+	"TextureManager.h"
+
+1715069527 source:c:\users\min\downloads\sdl2_game_cb\sdl2game\textmanager.cpp
+	"Game.h"
+	"TextManager.h"
+
+1715069513 c:\users\min\downloads\sdl2_game_cb\sdl2game\textmanager.h
+	<iostream>
+	<string>
+	<SDL.h>
+	<SDL_ttf.h>
+
