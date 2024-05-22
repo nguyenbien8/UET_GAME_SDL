@@ -31,8 +31,9 @@ void Game::handleEvent(){
         case SDL_MOUSEBUTTONDOWN:
             //getmousestate: dung de lay trang thai cua chuot
             SDL_GetMouseState(&x,&y);
-            if(isInside(x,y,370,495,402,525)) // Reset //
+            if(isInside(x,y,370,495,402,525)) // Return //
             {
+                //channel/chunk: am thanh/loop
                 Mix_PlayChannel(-1,gChunk1,0);
                 switchState(gState);
                 isPause = false;
@@ -54,11 +55,12 @@ void Game::handleEvent(){
         }
         return;
     }
-    //CHUYEN STATE
+    //CHANGE STATE
 	switch(gState)
 	{
     case LEVEL1:
     case LEVEL2:
+        //this: con tro den doi tuong hien tai
         if(gEvent.type == SDL_KEYDOWN) player->Handle(gEvent, this, map);
         break;
     case GUIDE:
@@ -66,7 +68,7 @@ void Game::handleEvent(){
         {
         case SDL_MOUSEBUTTONDOWN:
             SDL_GetMouseState(&x,&y);
-            if(isInside(x,y,880,965,25,108)) //quay lai SELECTMAP
+            if(isInside(x,y,880,965,25,108)) //SELECTMAP
             {
                 Mix_PlayChannel(-1,gChunk1,0);
                 switchState(SELECTMAP);
@@ -288,7 +290,6 @@ void Game::renderGame(){
     SDL_RenderPresent(gRenderer);
 }
 
-
 void Game::enterState(State id){
     switch(id)
     {
@@ -397,6 +398,7 @@ void Game::exitState(State id){
         break;
     case LEVEL1:
     case LEVEL2:
+        //gMusic/loop(-1: lap vo han)/change
         Mix_FadeInMusic(gMusic,-1,500);
         delete text;
         player = nullptr;

@@ -15,7 +15,9 @@ public:
     bool Collision(SDL_Rect hitbox);
 
     int xpos, ypos;
+
     double degrees;
+
     SDL_RendererFlip flip;
 
     SDL_Rect animation;

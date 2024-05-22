@@ -40,18 +40,6 @@ void Player::Handle(SDL_Event e, Game* game, Map *map)
             int type = map->curr_map[ypos/32+1][xpos/32];
             if(type == 118) { Mix_PlayChannel(-1,game->gChunk4,0); game->isWin = true; break; }
             if(type == 124 || type == 130 || type == 131) { Mix_PlayChannel(-1,game->gChunk6,0); game->isLose = true; break;}
-            if(type == 120)
-            {
-                for(int i = 1; i <= 32; i++) {ypos += 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_RIGHT; SDL_PushEvent(&e);
-                break;
-            }
-            if(type == 121)
-            {
-                for(int i = 1; i <= 32; i++) {ypos += 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_LEFT; SDL_PushEvent(&e);
-                break;
-            }
             if(type <= 51)
             {
                 break;
@@ -66,18 +54,7 @@ void Player::Handle(SDL_Event e, Game* game, Map *map)
             int type = map->curr_map[(ypos-1)/32][xpos/32];
             if(type == 118) { Mix_PlayChannel(-1,game->gChunk4,0); game->isWin = true; break; }
             if (type == 127 || type == 126 || type == 129){ Mix_PlayChannel(-1,game->gChunk6,0); game->isLose = true; break;}
-            if(type == 122)
-            {
-                for(int i = 1; i <= 32; i++){ ypos -= 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_RIGHT; SDL_PushEvent(&e);
-                break;
-            }
-            if(type == 123)
-            {
-                for(int i = 1; i <= 32; i++){ ypos -= 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_LEFT; SDL_PushEvent(&e);
-                break;
-            }
+
             if(type <= 51)
             {
                 break;
@@ -96,18 +73,6 @@ void Player::Handle(SDL_Event e, Game* game, Map *map)
             {
                 break;
             }
-            if(type == 121)
-            {
-                for(int i = 1; i <= 32; i++){ xpos += 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_UP; SDL_PushEvent(&e);
-                break;
-            }
-            if(type == 123)
-            {
-                for(int i = 1; i <= 32; i++) { xpos += 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_DOWN; SDL_PushEvent(&e);
-                break;
-            }
             xpos += 1; game->updateGame(1); game->renderGame();
         }
         break;
@@ -118,18 +83,6 @@ void Player::Handle(SDL_Event e, Game* game, Map *map)
             int type = map->curr_map[ypos/32][(xpos-1)/32];
             if(type == 118) { Mix_PlayChannel(-1,game->gChunk4,0); game->isWin = true; break; }
             if(type == 125 || type == 126 || type == 131) { Mix_PlayChannel(-1,game->gChunk6,0); game->isLose = true; break;}
-            if(type == 120)
-            {
-                for(int i = 1; i <= 32; i++) {xpos -= 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_UP; SDL_PushEvent(&e);
-                break;
-            }
-            if(type == 122)
-            {
-                for(int i = 1; i <= 32; i++) {xpos -= 1; game->updateGame(1); game->renderGame();}
-                SDL_Event e; e.type = SDL_KEYDOWN; e.key.keysym.sym = SDLK_DOWN; SDL_PushEvent(&e);
-                break;
-            }
             if(type <= 51)
             {
                 break;
