@@ -365,7 +365,11 @@ void Game::enterState(State id){
         trap[12] = new Trap (36,67,2); trap[13] = new Trap (36,66,2);
         trap[14] = new Trap (39,48,3); trap[15] = new Trap (39,34,4);
         trap[16] = new Trap (40,34,4); trap[17] = new Trap (41,34,4);
-        trap[18] = new Trap (42,34,4);
+        trap[18] = new Trap (42,34,4); trap[19] = new Trap (39,22,1);
+        trap[20] = new Trap (39,23,1); trap[21] = new Trap (39,24,1);
+        trap[22] = new Trap (39,25,1); trap[23] = new Trap (32,35,2);
+        trap[24] = new Trap (32,36,2); trap[25] = new Trap (48,25,2);
+        trap[26] = new Trap (49,24,4); trap[27] = new Trap (49,11,3);
         break;
 
     default:
